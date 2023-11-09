@@ -17,7 +17,7 @@ public class MemberDAO extends DBConnPool {
 			psmt = con.prepareStatement(query);
 			psmt.setString(1, uid);
 			psmt.setString(2, upass);
-			psmt.executeQuery();
+			rs = psmt.executeQuery();
 			
 			if (rs.next()) {
 				dto.setId(rs.getString("id"));
