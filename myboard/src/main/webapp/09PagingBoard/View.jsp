@@ -5,7 +5,7 @@
 <%
 String num = request.getParameter("num");  // 일련번호 받기
 
-BoardDAO dao = new BoardDAO(application);  // DAO 생성
+BoardDAO dao = new BoardDAO();  // DAO 생성
 dao.updateVisitCount(num);                 // 조회수 증가
 BoardDTO dto = dao.selectView(num);        // 게시물 가져오기
 dao.close();                               // DB 연결 해제
@@ -28,7 +28,7 @@ function deletePost() {
 </script>
 </head>
 <body>
-<jsp:include page="../Common/Link.jsp" />  <!-- 공통 링크 -->
+<jsp:include page="../common/Link.jsp" />  <!-- 공통 링크 -->
 
 <h2>회원제 게시판 - 내용 보기(View)</h2>
 <form name="writeFrm">

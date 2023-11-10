@@ -7,7 +7,7 @@
 String num = request.getParameter("num");  // 일련번호 얻기 
 
 BoardDTO dto = new BoardDTO();             // DTO 객체 생성
-BoardDAO dao = new BoardDAO(application);  // DAO 객체 생성
+BoardDAO dao = new BoardDAO();  // DAO 객체 생성
 dto = dao.selectView(num);  // 주어진 일련번호에 해당하는 기존 게시물 얻기
 
 // 로그인된 사용자 ID 얻기

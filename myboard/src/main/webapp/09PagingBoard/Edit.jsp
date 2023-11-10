@@ -5,7 +5,7 @@
 <%@ include file="./IsLoggedIn.jsp"%> 
 <%
 String num = request.getParameter("num");  // 일련번호 받기 
-BoardDAO dao = new BoardDAO(application);  // DAO 생성
+BoardDAO dao = new BoardDAO();  // DAO 생성
 BoardDTO dto = dao.selectView(num);        // 게시물 가져오기 
 String sessionId = session.getAttribute("UserId").toString(); // 로그인 ID 얻기 
 if (!sessionId.equals(dto.getId())) {      // 본인인지 확인
@@ -18,7 +18,7 @@ dao.close();  // DB 연결 해제
 <html>
 <head>
 <meta charset="UTF-8">
-<jsp:include page="../Common/Link.jsp" />
+<jsp:include page="../common/Link.jsp" />
 <title>회원제 게시판</title>
 <script type="text/javascript">
 function validateForm(form) {  // 폼 내용 검증
@@ -36,7 +36,7 @@ function validateForm(form) {  // 폼 내용 검증
 </script>
 </head>
 <body>
-<jsp:include page="../Common/Link.jsp" />
+<jsp:include page="../common/Link.jsp" />
 <h2>회원제 게시판 - 수정하기(Edit)</h2>
 <form name="writeFrm" method="post" action="EditProcess.jsp"
       onsubmit="return validateForm(this);">

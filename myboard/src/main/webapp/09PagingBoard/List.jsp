@@ -8,7 +8,7 @@
     pageEncoding="UTF-8"%>
 <%
 // DAO를 생성해 DB에 연결
-BoardDAO dao = new BoardDAO(application);
+BoardDAO dao = new BoardDAO();
 
 // 사용자가 입력한 검색 조건을 Map에 저장
 Map<String, Object> param = new HashMap<String, Object>();
@@ -50,7 +50,7 @@ dao.close();  // DB 연결 닫기
 <title>회원제 게시판</title>
 </head>
 <body>
-    <jsp:include page="../Common/Link.jsp" />  <!-- 공통 링크 -->
+    <jsp:include page="../common/Link.jsp" />  <!-- 공통 링크 -->
 
     <h2>목록 보기(List) - 현재 페이지 : <%= pageNum %> (전체 : <%= totalPage %>)</h2>
     <!-- 검색폼 -->

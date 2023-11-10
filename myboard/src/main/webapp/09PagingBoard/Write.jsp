@@ -22,7 +22,7 @@ function validateForm(form) {  // 폼 내용 검증
 </script>
 </head>
 <body>
-<jsp:include page="../Common/Link.jsp" />
+<jsp:include page="../common/Link.jsp" />
 <h2>회원제 게시판 - 글쓰기(Write)</h2>
 <form name="writeFrm" method="post" action="WriteProcess.jsp"
       onsubmit="return validateForm(this);">
