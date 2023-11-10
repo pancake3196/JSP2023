@@ -16,7 +16,7 @@ dto.setTitle(title);
 dto.setContent(content); 
 
 // DB에 반영
-BoardDAO dao = new BoardDAO(application); 
+BoardDAO dao = new BoardDAO(); 
 int affected = dao.updateEdit(dto); 
 dao.close();
 
