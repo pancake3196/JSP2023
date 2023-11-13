@@ -6,14 +6,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>kr.seoul</groupId>
-	<artifactId>myfile</artifactId>
+	<artifactId>
+		myfile</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>myfile Maven Webapp</name>
+	<name>myfile
+		Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
