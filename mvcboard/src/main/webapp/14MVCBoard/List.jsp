@@ -14,7 +14,6 @@
 <hr>
 <%= request.getAttribute("count") %>
 <hr>
-<hr>
 <%
 List<MVCBoardDTO> board = (List<MVCBoardDTO>)request.getAttribute("board");
 if (board.size() == 0) {
@@ -29,6 +28,6 @@ if (board.size() == 0) {
 <%        
 }
 %>
-
+${ requestScope["map"]["pagingImg"] }
 </body>
 </html>
